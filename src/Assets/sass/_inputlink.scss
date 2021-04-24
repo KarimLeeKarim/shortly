@@ -1,0 +1,53 @@
+.inputlink{
+    width: 80%;
+    margin: auto;
+    font-family: $poppins;
+    background:url(../images/bg-shorten-desktop.svg);
+    background-size: cover;
+    height: 168px;
+    background-color: $violet;
+    border-radius:10px;
+    position: relative;
+    z-index: 2;
+    top: 85px;
+    .input{
+        position: absolute;
+        left: 70px;
+        top: 32%;
+        font-family: $poppins;
+        @include respond(phone){
+            top: 11%;
+            left: 20px;
+        }
+        &__input{
+            width:870px;
+            height: 65px;
+            border: 4px solid gray;
+            border-radius: 7px;
+            padding-left: 20px;
+            @include respond(phone){
+                width:93%;
+                height: 50px;
+                border: 0px solid gray;
+                padding: 0 15px;
+            }
+        }
+        &__btn{
+            @include buttons(12px,$oceanDark);
+                width:180px;
+                height: 64px;
+                font-size: 19px;
+                margin-left: 20px;
+                @include respond(phone){
+                     width:92%;
+                    margin-left: 0px;
+                    margin-top: 30px;
+                    height: 50px;
+
+                }
+        }
+        &__btn:hover{
+            background: $oceanLight;
+        }
+    }
+}

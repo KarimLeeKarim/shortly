@@ -1,0 +1,61 @@
+.login{
+    z-index: 999;
+        position: fixed;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__close{
+            position: relative;
+            top: -10rem;
+            right: -7.5rem;
+            border: none;
+            background-color: transparent;
+            font-size: 30px;
+            cursor: pointer;
+            transition: 0.6s;
+            @include respond(phone){
+                top: -10rem;
+
+            }
+        }
+        &__close:hover{
+            color:red;
+        }
+        .input{
+            margin-bottom: 20px;
+            background-color:white;
+            border-radius: 8px;
+        }
+
+    @include respond(phone){
+        background-color:$oceanDark;
+        height: 100%;
+        position: fixed;
+        top: -10px;
+        padding: 300px 0;
+        transition: 0.6s;
+    }
+    .loginButton{
+        background-color:transparent;
+        border:1px solid black;
+        font-size: 20px;
+        color:black;
+        border-radius: 10px;
+        padding: 8px 25px;
+        outline: none;
+        cursor: pointer;
+        transition: 0.5s;
+        color: white;
+    }
+    .loginButton:hover{
+        background-color: $oceanDark;
+        color:black;
+    }
+
+}

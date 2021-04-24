@@ -1,0 +1,72 @@
+.footer{
+    background-color: $violetDark;
+    .containerFooter{
+        width: 80%;
+        margin: auto;
+        color: white;
+        font-family: $poppins;
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0 50px;
+        @include respond(phone){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        &__word{
+            margin-right: 100px;
+            @include respond(phone){
+                margin-right: 0;
+            }
+            .word{
+                color: white!important;
+                @include text(35px,700,$violetDark);
+            }
+        }
+        .links{
+            display: flex;
+            @include respond(phone){
+                flex-direction: column;
+            }
+            &__divs{
+                display: flex;
+                flex-direction: column;
+                margin-right: 80px;
+                @include respond(phone){
+                    margin-right: 0;
+                    margin-top: 20px;
+                }
+                .divsP{
+                    font-weight: bolder;
+                    font-size: 16px;
+                }
+                span{
+                    margin-top: 15px;
+                    color: gray;
+                    font-size: 15px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: 0.6s;
+
+                }
+                span:hover{
+                    color: $oceanDark;
+                }
+            }
+        }
+        .fb,.tw,.pi,.in{
+            transition: 0.6s;
+            cursor: pointer;
+            margin-right: 20px;
+            font-size: 32px;
+            @include respond(phone){
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+        }
+        .fb:hover,.tw:hover,.pi:hover,.in:hover{
+            color: $oceanDark;
+        }
+    }
+}

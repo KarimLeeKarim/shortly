@@ -1,0 +1,94 @@
+.container{
+    width: 80%;
+    margin: auto;
+    font-family: $poppins;
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 55px;
+        &__menu{
+            display: flex;
+            align-items: center;
+            .menu__word{
+                @include text(30px,700,#34313C);
+                @include respond(phone){
+                 @include text(35px,700,#34313C);
+                }
+            }
+            .menu__li{
+                @include text(14px,700,$gray);
+                cursor: pointer;
+                margin-left: 30px;
+                transition: 0.7s;
+                @include respond(phone){
+                    display: none;
+                }
+            }
+            .menu__li:first-of-type{
+                margin-left:50px!important ;
+            }
+            .menu__li:hover{
+                color: $violetDark;
+            }
+        }  
+        &__button{
+            @include respond(phone){
+                display: none;
+            }
+            .button__login{
+                @include text(14px,700,$gray);
+                border: none;
+                background-color: transparent;
+                transition: 0.7s;
+                margin-right: 30px;
+            }
+            .button__login:hover{
+                color: $violetDark;
+            }
+            .button__sign{
+                @include buttons(35px,$oceanDark)
+            }  
+            .button__sign:hover{
+                background-color: $oceanLight;
+            }
+
+        }     
+        .button__X{
+            display: none;
+            @include respond(phone){
+                display: block!important;
+            }
+        }
+    }
+    .form{
+        z-index: 999;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 43%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__close{
+            position: relative;
+            top: -20rem;
+            right: -7.5rem;
+            border: none;
+            background-color: transparent;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        &__close2{
+            position: relative;
+            top: -9rem;
+            right: -7.5rem;
+            border: none;
+            background-color: transparent;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+}

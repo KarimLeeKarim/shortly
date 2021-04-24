@@ -1,0 +1,51 @@
+.mobile{
+    position: absolute;
+    top:120px;
+    left: 40px;
+    display: none;
+    background-color: $violet;
+    color:white;
+    width: 300px;
+    height: 330px;
+    border-radius: 10px;
+    padding:20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: $poppins;
+    font-weight: 700;
+    display: none;
+    @include respond(phone){
+        display: flex;
+    }
+    p{
+        margin-bottom: 20px;
+    }
+    p:nth-child(1){
+        margin-top: 15px;
+    }
+    hr{
+        margin: 10px 0 30px;
+        color: gray;
+        border:0.5px solid gray;
+    }
+    .loginmobile{
+        background-color: transparent;
+        border:none;
+        color: white;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-family: $poppins;
+    }
+    .signmobile{
+        @include buttons(30px,$oceanDark);
+        font-size: 19px;
+        width:auto;
+    }
+    .signmobile:hover{
+        background-color: $oceanLight;
+    }
+    
+}
+
+

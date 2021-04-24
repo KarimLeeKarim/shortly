@@ -1,0 +1,31 @@
+@import "./settings/colors";
+@import "./settings/reset";
+@import "./settings/mixin";
+@import "./settings/typography";
+@import "navbar";
+@import "info";
+@import "inputlink";
+@import "statistics";
+@import "loginForm";
+@import "signForm";
+@import 'boostlinks';
+@import 'footer';
+@import 'mobile';
+@import 'loader';
+
+
+
+.blur{
+    filter: blur(4px); 
+    -webkit-transition: 2s;
+    transition: all 0.8s linear;
+    pointer-events: none;
+    background: rgba(0,0,0, 0.8);
+}
+
+
+// .blackback{
+//     background: rgba(0,0,0, 0.8);
+//     pointer-events: none;
+// }
+
